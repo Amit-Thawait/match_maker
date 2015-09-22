@@ -1,0 +1,117 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :reg_no %><br>
+    <%= f.text_field :reg_no %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :occupation %><br>
+    <%= f.text_field :occupation %>
+  </div>
+  <div class="field">
+    <%= f.label :income %><br>
+    <%= f.text_field :income %>
+  </div>
+  <div class="field">
+    <%= f.label :place_of_birth %><br>
+    <%= f.text_field :place_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :dob %><br>
+    <%= f.date_select :dob %>
+  </div>
+  <div class="field">
+    <%= f.label :time_of_birth %><br>
+    <%= f.time_select :time_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :brothers_married %><br>
+    <%= f.number_field :brothers_married %>
+  </div>
+  <div class="field">
+    <%= f.label :brothers_unmarried %><br>
+    <%= f.number_field :brothers_unmarried %>
+  </div>
+  <div class="field">
+    <%= f.label :sister_married %><br>
+    <%= f.number_field :sister_married %>
+  </div>
+  <div class="field">
+    <%= f.label :sister_unmarried %><br>
+    <%= f.number_field :sister_unmarried %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :fathers_name %><br>
+    <%= f.text_field :fathers_name %>
+  </div>
+  <div class="field">
+    <%= f.label :residentail_address %><br>
+    <%= f.text_area :residentail_address %>
+  </div>
+  <div class="field">
+    <%= f.label :parents_phone_number %><br>
+    <%= f.text_field :parents_phone_number %>
+  </div>
+  <div class="field">
+    <%= f.label :fathers_occupation %><br>
+    <%= f.text_field :fathers_occupation %>
+  </div>
+  <div class="field">
+    <%= f.label :fathers_occupation_address %><br>
+    <%= f.text_area :fathers_occupation_address %>
+  </div>
+  <div class="field">
+    <%= f.label :fathers_income %><br>
+    <%= f.number_field :fathers_income %>
+  </div>
+  <div class="field">
+    <%= f.label :origin_in_sindh %><br>
+    <%= f.text_field :origin_in_sindh %>
+  </div>
+  <div class="field">
+    <%= f.label :height_in_inches %><br>
+    <%= f.text_field :height_in_inches %>
+  </div>
+  <div class="field">
+    <%= f.label :wight_in_kg %><br>
+    <%= f.text_field :wight_in_kg %>
+  </div>
+  <div class="field">
+    <%= f.label :complexion %><br>
+    <%= f.text_field :complexion %>
+  </div>
+  <div class="field">
+    <%= f.label :maritial_status %><br>
+    <%= f.text_field :maritial_status %>
+  </div>
+  <div class="field">
+    <%= f.label :physical_status %><br>
+    <%= f.text_field :physical_status %>
+  </div>
+  <div class="field">
+    <%= f.label :remarks %><br>
+    <%= f.text_field :remarks %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
